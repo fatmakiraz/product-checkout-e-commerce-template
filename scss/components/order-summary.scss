@@ -1,0 +1,94 @@
+.order-summary {
+	padding: 16px;
+	border: 1px solid rgba(var(--color-dark-rgb), .2);
+	border-radius: var(--border-radius);
+
+	@include mq() {
+		padding: 32px;
+	}
+
+	&-title {
+		font-weight: var(--font-bold);
+		font-size: 1.2em;
+		margin-bottom: 24px;
+
+		@include mq() {
+			font-size: 1.5em;
+			margin-bottom: 40px;
+		}
+	}
+
+	&-detail {
+		padding-bottom: 22px;
+		border-bottom: 1px solid rgba(var(--color-dark-rgb), .2);
+		margin-bottom: 24px;
+
+		@include mq() {
+			padding-bottom: 28px;
+			margin-bottom: 32px;
+		}
+	}
+
+	&-total {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: var(--font-semi-bold);
+		margin-bottom: 20px;
+		font-size: .9em;
+
+		@include mq() {
+			font-size: 1em;
+			margin-bottom: 28px;
+		}
+
+		&-title {
+			text-transform: uppercase;
+		}
+	}
+
+	&-delivery {
+		letter-spacing: .02em;
+		margin-bottom: 20px;
+		line-height: 1.4em;
+		font-size: .9em;
+
+		@include mq() {
+			margin-bottom: 28px;
+			font-size: 1em;
+		}
+
+		&-bold {
+			font-weight: var(--font-bold);
+		}
+	}
+
+	&-coupon-input {
+		padding: 16px 36px 16px 20px;
+		margin-bottom: 24px;
+		position: relative;
+		border: 1px solid rgba(var(--color-dark-rgb), .2);
+
+		.input-coupon::placeholder {
+			font-size: .9em;
+
+			@include mq() {
+				font-size: 1em;
+			}
+
+		}
+
+		.icon-tag {
+			position: absolute;
+			right: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+	}
+
+	.button-primary {
+		width: 100%;
+	}
+
+}

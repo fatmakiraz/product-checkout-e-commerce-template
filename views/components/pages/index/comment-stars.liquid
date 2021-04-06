@@ -1,0 +1,16 @@
+<div class="comment-stars">
+	{% for i in (1..5) reversed %}
+	<input class="comment-stars-input" type="radio" name="rating" value="{{i}}" id="rating-{{i}}">
+	<label class="comment-stars-view" for="rating-{{i}}">
+		<svg class="icon icon-star">
+			<use xlink:href="#icon-star"></use>
+		</svg>
+	</label>
+	<input class="comment-stars-input" type="radio" name="rating" value="{{i | minus: 0.5}}" id="rating-{{i| minus: 0.5}}" {% if i == 5 %} checked {% endif %}>
+	<label class="comment-stars-view is-half" for="rating-{{i| minus: 0.5}}">
+		<svg class="icon icon-star-half">
+			<use xlink:href="#icon-star-half"></use>
+		</svg>
+	</label>
+	{% endfor %}
+</div>

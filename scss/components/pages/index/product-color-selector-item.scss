@@ -1,0 +1,38 @@
+.product-color-selector-item {
+    display: flex;
+    cursor: pointer;
+
+    &-input {
+        display: none;
+    }
+
+    &-viewer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            opacity: .4;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: currentColor;
+        }
+
+    }
+
+    &-input:checked+&-viewer::before {
+        background-color: currentColor;
+    }
+
+}

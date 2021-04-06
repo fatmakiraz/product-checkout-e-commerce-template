@@ -1,0 +1,118 @@
+.product-image {
+    grid-area: product-detail-image;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+
+    @include mq("desktop") {
+        align-items: flex-end;
+    }
+
+    &-number {
+        display: flex;
+        margin-bottom: 14px;
+
+        &-bold {
+            font-weight: var(--font-bold);
+            font-size: 1.6em;
+
+            @include mq("desktop") {
+                font-size: 2.12em;
+            }
+        }
+
+        &-light {
+            align-self: flex-start;
+            margin-left: 6px;
+            font-weight: var(--font-light);
+            font-size: 1em;
+
+            @include mq("desktop") {
+                font-size: 1.25em;
+            }
+        }
+    }
+
+    &-order {
+        display: flex;
+        margin-bottom: 15px;
+
+        @include mq("desktop") {
+            margin-bottom: 0;
+        }
+
+        &-previous {
+            cursor: pointer;
+            margin-right: 76px;
+        }
+
+        &-next {
+            cursor: pointer;
+        }
+    }
+
+    &-photo {
+        position: relative;
+        margin-bottom: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include mq('desktop') {
+            margin-bottom: 70px;
+        }
+
+        &::before {
+            content: "";
+            width: calc(55% + var(--container-gutter));
+            height: 70%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            right: calc(var(--container-gutter) * -1);
+            top: 15%;
+            background: linear-gradient(270.26deg, rgb(75, 135, 133) 54.22%, rgba(75, 135, 133, 0) 99.85%);
+            opacity: 0.1;
+        }
+
+        .product-swiper {
+            .swiper-slide {
+                text-align: center;
+                user-select: none;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: 407px;
+        }
+    }
+
+    &-nav {
+        max-width: 100%;
+
+        &-item {
+            cursor: pointer;
+            border: 2px solid #E7ECEF;
+            width: 60px;
+
+            @include mq() {
+                width: 88px;
+            }
+
+            &.is-active {
+                border-color: var(--color-primary);
+            }
+
+            img {
+                height: 60px;
+    
+                @include mq() {
+                    height: 88px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.button-secondary {
+	margin-left: 10px;
+	font-weight: var(--font-bold);
+	font-size: .75em;
+	text-transform: uppercase;
+
+	&:hover {
+		opacity: .8;
+		transition: .2s;
+	}
+
+	@include mq() {
+		font-size: 1em;
+		margin-left: 30px;
+	}
+
+	&.red {
+		color: var(--color-red);
+	}
+
+	&.green {
+		color: var(--color-primary);
+	}
+
+	&+& {
+		margin-left: 24px;
+		padding-left: 24px;
+		border-left: 1px solid rgba(var(--color-dark-rgb), .2);
+	}
+}

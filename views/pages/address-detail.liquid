@@ -1,0 +1,25 @@
+{% layout 'master' %}
+{% block content %}
+
+<section class="address">
+	<div class="container">
+		<div class="address-wrapper checkout-wrapper">
+			<div class="left-main-wrapper">
+				<div class="cart-breadcrumb-wrapper">
+					{% include 'cart-breadcrumb' with title: 'Address' %}
+					{% include 'cart-breadcrumb' with title: 'Shipping', is_passive: true %}
+					{% include 'cart-breadcrumb' with title: 'Payment', is_passive: true %}
+				</div>
+				<div class="address-item-wrapper">
+					{% include 'pages/address/detail-item' with person_name: 'Huzefa Bagwala', address_name: 'Home', address_content: '1131 Dusty Townline, Jacksonville, TX 40322', contact_title: 'Contact -', contact_number: '(936) 361-0310', attributes: "checked" %}
+					{% include 'pages/address/detail-item' with person_name: 'Fatma Kiraz', address_name: 'Office', address_content: '354334, Izmir, Turkey', contact_title: 'Contact -', contact_number: '(232) 123-34-43' %}
+				</div>
+				{% include 'button/add' with title: 'add new address' %}
+			</div>
+			{% include 'order-summary' with button_title: 'Continue to Shipping', a_href: 'shipping-detail.html' %}
+		</div>
+	</div>
+
+</section>
+
+{% endblock %}

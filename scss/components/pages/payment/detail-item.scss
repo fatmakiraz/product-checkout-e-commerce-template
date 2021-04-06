@@ -1,0 +1,60 @@
+.payment-detail-item {
+	display: flex;
+	padding: 14px 18px;
+	width: 100%;
+	border: 1px solid rgba(var(--color-dark-rgb), .2);
+	border-radius: var(--border-radius);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include mq() {
+		padding: 18px 24px;
+	}
+
+	&-content {
+		display: flex;
+		cursor: pointer;
+
+		&-card-image {
+			margin-left: 12px;
+			width: 22px;
+
+			@include mq() {
+				margin-left: 16px;
+				width: 24px;
+			}
+
+			img{
+				width: 100%;
+			}
+
+		}
+
+		&-card-number {
+			margin-left: 12px;
+			font-size: .8em;
+			font-weight: var(--font-semi-bold);
+
+			@include mq() {
+				margin-left: 16px;
+				font-size: 1em;
+			}
+		}
+
+		&-card-date {
+			margin-left: 14px;
+			font-size: .75em;
+			color: rgba(var(--color-dark-rgb), .4);
+
+			@include mq() {
+				margin-left: 40px;
+				font-size: 1em;
+			}
+		}
+	}
+
+	&+& {
+		border-top: none;
+	}
+}

@@ -1,0 +1,11 @@
+.button-add {
+	text-transform: uppercase;
+	font-weight: var(--font-semi-bold);
+	color: var(--color-primary);
+	font-size: .9em;
+	margin-top: 32px;
+
+	@include mq() {
+		font-size: 1em;
+	}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product & Checkout E-Commerce Template</title>
+    <meta name="description" content="Product & Checkout E-Commerce Template">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    {% include 'svg-icons' %}
+    <header class="header">
+        <figure class="header-logo">
+            <a title="Home" href="index.html">
+                <picture>
+                    <img src="img/logo.svg" alt="Logo">
+                </picture>
+            </a>
+        </figure>
+        <nav class="header-menu">
+            <a title="Shop" href="index.html" class="header-menu-title">Shop</a>
+            <a title="Collective" href="index.html" class="header-menu-title">Collective</a>
+            <a title="Designers" href="index.html" class="header-menu-title">Designers</a>
+            <a title="About Us" href="mailto:test@test.com" class="header-menu-title">About Us</a>
+            <a title="Contact Us" href="tel:123456789" class="header-menu-title">Contact Us</a>
+        </nav>
+        <div class="header-button">
+            <button aria-label="Menu" class="button header-button-item header-button-hamburger">
+                <svg class="icon icon-menu">
+                    <use xlink:href="#icon-menu"></use>
+                </svg>
+                <svg class="icon icon-close">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </button>
+            <button  aria-label="Search" class="button header-button-item header-button-search">
+                <svg class="icon icon-search">
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+            </button>
+            <div class="header-button-item header-button-cart">
+                <a title="Cart" href="cart-detail.html">
+                    <svg class="icon icon-cart">
+                        <use xlink:href="#icon-cart"></use>
+                    </svg>
+                </a>
+            </div>
+
+
+            <input type="text" name="search-text" class="input header-button-search-input" placeholder="Search anything..">
+        </div>
+    </header>
+</body>
+<main class="main">
+    {% block content %}
+    {% endblock %}
+</main>
+
+
+{% block custom_js %}
+{% endblock %}
+<script src="js/main.js"></script>
+
+</html>

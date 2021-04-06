@@ -1,0 +1,20 @@
+.button-primary {
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: var(--font-bold);
+    padding: 16px 25px;
+    font-size: .8em;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+        opacity: .9;
+        transition: .2s;
+    }
+
+    @include mq('desktop') {
+        padding: 18px 40px;
+        font-size: 1em;
+    }
+}

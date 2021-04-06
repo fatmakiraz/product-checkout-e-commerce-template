@@ -1,0 +1,48 @@
+.order {
+
+	&-header {
+		display: flex;
+		align-items: center;
+		font-size: .8em;
+		margin-bottom: 32px;
+
+		@include mq('desktop') {
+			margin-bottom: 65px;
+			font-size: 1em;
+		}
+
+
+		&-subtitle {
+			margin-left: 14px;
+			font-weight: var(--font-semi-bold);
+			opacity: .4;
+
+		}
+
+
+	}
+
+	&-offer {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		background: #EBF6F6;
+		border: 1px solid rgba(58, 163, 159, .2);
+		border-radius: var(--border-radius);
+
+		@include mq('desktop') {
+			padding: 20px;
+		}
+
+		&-explanation {
+			font-size: .88em;
+			margin-left: 8px;
+
+			@include mq('desktop') {
+				font-size: 1em;
+				margin-left: 20px;
+				letter-spacing: .02em;
+			}
+		}
+	}
+}

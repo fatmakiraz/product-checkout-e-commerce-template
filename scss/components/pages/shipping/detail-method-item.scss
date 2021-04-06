@@ -1,0 +1,42 @@
+.shipping-method {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	&-detail {
+		display: flex;
+		align-items: center;
+		margin-left: 12px;
+
+		@include mq() {
+			margin-left: 16px;
+		}
+
+		&-price {
+			font-weight: var(--font-semi-bold);
+			margin-right: 8px;
+			font-size: .95em;
+
+			@include mq() {
+				font-size: 1em;
+				margin-right: 10px;
+			}
+		}
+
+		&-type {
+			font-size: .9em;
+
+			@include mq() {
+				font-size: 1em;
+			}
+		}
+	}
+
+	&+& {
+		margin-top: 22px;
+
+		@include mq() {
+			margin-top: 28px;
+		}
+	}
+}

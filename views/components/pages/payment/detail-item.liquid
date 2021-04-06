@@ -1,0 +1,15 @@
+<div class="payment-detail-item">
+	<label class="payment-detail-item-content">
+		{% include 'input-custom-selector' %}
+		<figure class="payment-detail-item-content-card-image">
+			<picture>
+				<img src="{{card_image}}" alt="Card image">
+			</picture>
+		</figure>
+		<div class="payment-detail-item-content-card-number">{{card_number}}</div>
+		<div class="payment-detail-item-content-card-date">{{card_date}}</div>
+	</label>
+	<div class="payment-detail-item-button">
+		{% include 'button/secondary' with title: 'remove', color: 'red' %}
+	</div>
+</div>

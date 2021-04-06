@@ -1,0 +1,11 @@
+.checkout-wrapper {
+	display: grid;
+	row-gap: 32px;
+	grid-template-columns: 100%;
+
+	@include mq('desktop') {
+		column-gap: 80px;
+		grid-template-columns: auto 375px;
+		row-gap: 0px;
+	}
+}

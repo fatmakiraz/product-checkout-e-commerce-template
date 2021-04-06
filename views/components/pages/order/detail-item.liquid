@@ -1,0 +1,21 @@
+<div class="order-detail-item-wrapper">
+	<div class="order-detail-item">
+		<figure class="order-detail-item-photo">
+			<picture>
+				<img src="{{photo}}" alt="Product Photo">
+			</picture>
+		</figure>
+		<div class="order-detail-item-content">
+			<div class="order-detail-item-content-title">{{title}}</div>
+			<div class="order-detail-item-content-color">
+				<div class="order-detail-item-content-color-light">Color</div>
+				<div class="order-detail-item-content-color-dark">{{color}}</div>
+			</div>
+			<div class="order-detail-item-content-buttons">
+				{% include 'product-quantity-input' %}
+				{% include 'button/secondary' with title: 'remove' color: 'red' %}
+			</div>
+		</div>
+	</div>
+	<div class="order-detail-item-price">${{price}}</div>
+</div>

@@ -1,0 +1,42 @@
+.shipping-detail-item {
+	display: flex;
+	flex-direction: column;
+
+	&-title {
+		margin-bottom: 6px;
+		font-weight: var(--font-semi-bold);
+		color: rgba(var(--color-dark-rgb), .6);
+		font-size: .9em;
+
+		@include mq() {
+			font-size: 1em;
+		}
+	}
+
+	&-box {
+		padding: 16px 20px;
+		width: 100%;
+		border: 1px solid rgba(var(--color-dark-rgb), .2);
+		border-radius: var(--border-radius);
+		display: flex;
+		justify-content: space-between;
+
+		@include mq() {
+			padding: 18px 24px;
+		}
+
+		&-content {
+			font-size: .88em;
+
+			@include mq() {
+				font-size: 1em;
+			}
+
+		}
+	}
+
+
+	&+& {
+		margin-top: 24px;
+	}
+}

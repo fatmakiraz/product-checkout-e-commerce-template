@@ -1,0 +1,30 @@
+:root {
+    --color-primary: #3AA39F;
+    --color-light-grey: #9C9EA8;
+    --color-red: #E14B4B;
+    --color-gold: #FFC41F;
+    --color-gold-light: #ffd560;
+    --color-dark: #17183B;
+    --color-dark-rgb: 23, 24, 59;
+    --font-family: 'Montserrat', sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --gutter-header: 20px;
+    --header-height: 60px;
+    --container-gutter: 16px;
+    --border-radius: 2px;
+    --main-padding: 30px;
+
+    @include mq() {
+        --gutter-header: 40px;
+        --header-height: 80px;
+        --container-gutter: 40px;
+        --main-padding: 60px;
+    }
+
+    @include mq("desktop") {
+        --container-gutter: 80px;
+    }
+}

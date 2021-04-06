@@ -1,0 +1,7 @@
+{% if a_href %}
+<a title="{{button_title}}" href="{{a_href}}" class="button button-primary">{{button_title}}</a>
+{% else %}
+<button aria-label="{{button_title}}" type="{{type | default: "button"}}" class="button button-primary">
+	{{button_title}}
+</button>
+{% endif %}

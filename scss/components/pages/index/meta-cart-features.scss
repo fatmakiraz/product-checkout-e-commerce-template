@@ -1,0 +1,26 @@
+.meta-cart-features-item {
+    font-size: .9em;
+    line-height: 1.3em;
+    display: flex;
+    align-items: center;
+
+    @include mq("desktop") {
+        font-size: 1em;
+    }
+
+
+    &+& {
+
+        &::before {
+            content: "";
+            display: block;
+            width: 3px;
+            height: 3px;
+            border-radius: 100%;
+            background-color: var(--color-dark);
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+
+    }
+}

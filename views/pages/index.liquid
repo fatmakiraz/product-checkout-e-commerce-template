@@ -1,0 +1,82 @@
+{% layout 'master' %}
+{% block content %}
+<section class="product-detail">
+    <div class="container">
+        <div class="product-detail-wrapper">
+            <div class="product-detail-header">
+                <a title="Previous Page" class="previous-page" href="#">
+                    <svg class="icon icon-arrow-previous">
+                        <use xlink:href="#icon-arrow-previous"></use>
+                    </svg>
+                </a>
+                <div class="breadcrumb">
+                    <a title="Chair" class="breadcrumb-item-link" href="index.html">Chair</a>
+                    <span class="breadcrumb-item-current">/ Meryl Lounge Chair</span>
+                </div>
+            </div>
+            <form method="get" action="cart-detail.html" class="product-content">
+                <h1 class="product-content-title">Meryl Lounge Chair</h1>
+                <div class="product-content-numbers">
+                    <div class="product-content-numbers-price">$149.99</div>
+                    <div class="product-content-numbers-comment">
+                        {% include 'pages/index/comment-stars' %}
+                        <div class="product-content-numbers-comment-rate"><span class="color-dark">4.6 / 5.0 </span></span> <span class="color-light-grey">(556)</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="product-content-explanation">The gently curved lines accentuated by sewn details are kind to your body and pleasant to look at. Also, there’s a tilt and height-adjusting mechanism that’s built to outlast years of ups and downs.</p>
+                <div class="product-content-color-selector">
+                    {% include 'pages/index/product-color-selector-item' with color: "#C1BDB3", checked:' checked' %}
+                    {% include 'pages/index/product-color-selector-item' with color: "#58737D" %}
+                    {% include 'pages/index/product-color-selector-item' with color: "#545454" %}
+                    {% include 'pages/index/product-color-selector-item' with color: "#CBA5A5" %}
+                </div>
+                <div class="product-content-quantity-selector">
+                    {% include 'product-quantity-input' %}
+                    {% include 'button/primary' with button_title: 'add to cart', type: 'submit' %}
+                </div>
+                <div class="product-content-feature">
+                    {% include 'pages/index/meta-cart-features' with content: 'Free 2-5 day shipping' %}
+                    {% include 'pages/index/meta-cart-features' with content: 'Tool-free assembly' %}
+                    {% include 'pages/index/meta-cart-features' with content: '30-day trial' %}
+                </div>
+                <div class="product-content-bottom-wrapper">
+                    <button aria-label="Add to Wishlist" type="button" class="button product-content-favorite-button product-content-bottom-item">
+                        <svg class="icon icon-heart">
+                            <use xlink:href="#icon-heart"></use>
+                        </svg>
+                        Add to Wishlist
+                    </button>
+                    <div class="product-content-social product-content-bottom-item">
+                        <a title="facebook" class="product-content-social-item" href="#" target="_blank">
+                            <svg class="icon icon-facebook">
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                        <a title="twitter" class="product-content-social-item" href="#" target="_blank">
+                            <svg class="icon icon-twitter">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                        <a title="pinterest" class="product-content-social-item" href="#" target="_blank">
+                            <svg class="icon icon-pinterest">
+                                <use xlink:href="#icon-pinterest"></use>
+                            </svg>
+                        </a>
+                        <a title="instagram" class="product-content-social-item" href="#" target="_blank">
+                            <svg class="icon icon-instagram">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </form>
+            {% include 'pages/index/product-swiper' %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block custom_js %}
+<script src="js/swiper.min.js"></script>
+{% endblock %}

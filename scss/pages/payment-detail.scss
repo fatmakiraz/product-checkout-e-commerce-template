@@ -1,0 +1,16 @@
+.payment {
+	&-item-wrapper {
+		padding-bottom: 32px;
+		border-bottom: 1px solid rgba(var(--color-dark-rgb), .2);
+	}
+
+	&-title {
+		font-size: 1.2em;
+		font-weight: var(--font-semi-bold);
+		margin-bottom: 28px;
+
+		@include mq() {
+			font-size: 1.25em;
+		}
+	}
+}

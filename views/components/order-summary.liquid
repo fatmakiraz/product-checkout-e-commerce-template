@@ -1,0 +1,25 @@
+<aside class="order-summary">
+	<div class="order-summary-wrapper">
+		<div class="order-summary-title">Order Summary
+		</div>
+		<div class="order-summary-detail">
+			{% include 'order-summary-item' with name: 'Price', price: '$319.98' %}
+			{% include 'order-summary-item' with name: 'Discount', price: '$31.9' %}
+			{% include 'order-summary-item' with name: 'Shipping' price: 'Free', extra-class: 'text-primary' %}
+			{% include 'order-summary-item' with name: 'Coupon Applied', price: '$0.00' %}
+		</div>
+		<div class="order-summary-total">
+			<div class="order-summary-total-title">Total</div>
+			<div class="order-summary-total-price">Total</div>
+		</div>
+		<div class="order-summary-delivery">Estimated Delivery by <span class="order-summary-delivery-bold">01 Feb 2021</span>
+		</div>
+		<div class="order-summary-coupon-input">
+			<svg class="icon icon-tag">
+				<use xlink:href="#icon-tag"></use>
+			</svg>
+			<input type="text" name="coupon" id="coupon" placeholder="Coupon Code" class="input input-coupon">
+		</div>
+		{% include 'button/primary' %}
+	</div>
+</aside>

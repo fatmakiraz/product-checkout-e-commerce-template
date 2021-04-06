@@ -1,0 +1,47 @@
+.cart-breadcrumb {
+	display: flex;
+	align-items: center;
+
+	.cart-step {
+		font-size: .95em;
+		font-weight: var(--font-bold);
+		user-select: none;
+
+		@include mq('desktop') {
+			font-size: 1.5em;
+
+		}
+	}
+
+	.icon-arrow-right {
+		display: none;
+		color: rgba(var(--color-dark-rgb), .2);
+		font-size: .8em;
+
+		@include mq('desktop') {
+			font-size: 1em;
+		}
+
+	}
+
+	&-is-passive {
+		color: rgba(var(--color-dark-rgb), .2)
+	}
+
+	&+& {
+
+		.icon-arrow-right {
+			display: block;
+			margin-left: 10px;
+			margin-right: 10px;
+
+			@include mq('desktop') {
+				font-size: 1.5em;
+				margin-left: 45px;
+				margin-right: 45px;
+
+			}
+		}
+	}
+
+}

@@ -1,0 +1,38 @@
+.input-custom-selector {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&-input {
+		display: none;
+	}
+
+	&-viewer {
+		width: 16px;
+		height: 16px;
+		background-color: #FFFFFF;
+		border: 1px solid rgba(var(--color-dark-rgb), .2);
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&::after {
+			content: "";
+			display: none;
+			width: 8px;
+			height: 8px;
+			background-color: var(--color-primary);
+			border-radius: 100%;
+		}
+
+	}
+
+	&-input:checked+&-viewer {
+		border-color: var(--color-primary);
+
+		&::after {
+			display: block;
+		}
+	}
+}

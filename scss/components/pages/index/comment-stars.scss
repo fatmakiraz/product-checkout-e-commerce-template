@@ -1,0 +1,49 @@
+.comment-stars {
+	display: flex;
+	flex-direction: row-reverse;
+
+	&-input {
+		display: none;
+
+		&:checked {
+			&~.comment-stars-view {
+				svg {
+					fill: var(--color-gold);
+				}
+
+				&:hover,
+				&:hover~.comment-stars-view {
+					svg {
+						fill: var(--color-gold-light);
+					}
+				}
+			}
+		}
+	}
+
+	&-view {
+		cursor: pointer;
+
+		svg {
+			fill: #ededef;
+			width: 1.39306640625em;
+			height: 1.5em;
+		}
+
+		&.is-half {
+			transform: translateX(100%);
+			margin-left: -0.69580078125em;
+
+			svg {
+				width: 0.69580078125em;
+			}
+		}
+
+		&:hover,
+		&:hover~.comment-stars-view {
+			svg {
+				fill: var(--color-gold-light);
+			}
+		}
+	}
+}

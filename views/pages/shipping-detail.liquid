@@ -1,0 +1,32 @@
+{% layout 'master' %}
+{% block content %}
+
+<section class="shipping">
+	<div class="container">
+		<div class="shipping-wrapper checkout-wrapper">
+			<div class="left-main-wrapper">
+				<div class="cart-breadcrumb-wrapper">
+					{% include 'cart-breadcrumb' with title: 'Address'  is_passive: true %}
+					{% include 'cart-breadcrumb' with title: 'Shipping' %}
+					{% include 'cart-breadcrumb' with title: 'Payment', is_passive: true %}
+				</div>
+				<div class="shipping-item-wrapper">
+					{% include 'pages/shipping/detail-item' with title: 'Contact', content: '(936) 361-0310' %}
+					{% include 'pages/shipping/detail-item' with title: 'Shipping Address', content: '1131 Dusty Townline, Jacksonville, TX 40322' %}
+				</div>
+
+				<div class="shipping-method-wrapper">
+					<div class="shipping-method-title">Shipment Method
+					</div>
+					<div class="shipping-method-item-wrapper">
+						{% include 'pages/shipping/detail-method-item' with price: 'Free', type: 'Regular Shipping', attributes: 'checked' %}
+						{% include 'pages/shipping/detail-method-item' with price: '$8.50', type: 'Priority Shipping' %}
+					</div>
+				</div>
+			</div>
+			{% include 'order-summary' with button_title: 'Continue to Payment', a_href: 'payment-detail.html' %}
+		</div>
+	</div>
+</section>
+
+{% endblock %}

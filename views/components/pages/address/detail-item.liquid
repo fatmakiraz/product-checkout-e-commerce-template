@@ -1,0 +1,24 @@
+<div class="address-detail-item-wrapper">
+	<label class="address-detail-item">
+		<div class="address-detail-item-left-wrapper">
+			{% include 'input-custom-selector' %}
+			<div class="address-detail-item-content-wrapper">
+				<div class="address-detail-item-name">
+					<div class="address-detail-item-name-person">{{person_name}}</div>
+					<div class="address-detail-item-name-address">{{address_name}}</div>
+				</div>
+				<div class="address-detail-item-content">
+					{{address_content}}
+				</div>
+				<div class="address-detail-item-contact">
+					<div class="address-detail-item-contact-title">{{contact_title}}</div>
+					<div class="address-detail-item-contact-number">{{contact_number}}</div>
+				</div>
+			</div>
+		</div>
+	</label>
+	<div class="address-detail-item-buttons">
+		{% include 'button/secondary' with title: 'edit' %}
+		{% include 'button/secondary' with title: 'remove' color: 'red' %}
+	</div>
+</div>

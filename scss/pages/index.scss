@@ -1,0 +1,200 @@
+.product-detail {
+    &-wrapper {
+        display: grid;
+        grid-template-areas:
+            "product-detail-header"
+            "product-detail-image"
+            "product-detail-content";
+        grid-template-columns: 100%;
+        row-gap: 26px;
+
+        @include mq("desktop") {
+            --gutter : 90px;
+            grid-template-columns: repeat(2, calc(50% - var(--gutter)));
+            grid-template-areas:
+                "product-detail-header product-detail-image"
+                "product-detail-content product-detail-image";
+            column-gap: calc(var(--gutter) * 2);
+            row-gap: 32px;
+        }
+    }
+
+
+
+    &-header {
+        grid-area: product-detail-header;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq("desktop") {
+            margin-bottom: 70px;
+            display: block;
+        }
+
+        .previous-page {
+            display: inline-block;
+
+            @include mq("desktop") {
+                margin-bottom: 40px;
+            }
+        }
+
+        .breadcrumb {
+            font-weight: var(--font-semi-bold);
+            font-size: .87em;
+
+            &-item-link {
+                color: rgba(var(--color-dark-rgb), .4);
+            }
+        }
+    }
+}
+
+
+
+.product-content {
+    grid-area: product-detail-content;
+
+    &-title {
+        font-size: 1.8em;
+        font-weight: var(--font-bold);
+        margin-bottom: 24px;
+
+        @include mq("desktop") {
+            font-size: 2.75em;
+        }
+    }
+
+    &-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        @include mq("desktop") {
+            margin-bottom: 38px;
+        }
+
+        &-price {
+            font-size: 1.5em;
+            font-weight: var(--font-regular);
+
+            @include mq("desktop") {
+                font-size: 2.12em;
+            }
+        }
+
+        &-comment {
+            display: flex;
+            align-items: center;
+            font-size: .84em;
+
+
+            @include mq("desktop") {
+                font-size: .88em;
+            }
+
+            &-rate {
+                display: flex;
+                margin-left: 10px;
+
+                .color-light-grey {
+                    color: var(--color-light-grey);
+                }
+            }
+        }
+    }
+
+    &-explanation {
+        line-height: 1.5em;
+        margin-bottom: 30px;
+
+        @include mq("desktop") {
+            margin-bottom: 38px;
+        }
+    }
+
+    &-color-selector {
+        display: flex;
+        margin-bottom: 30px;
+
+        @include mq("desktop") {
+            margin-bottom: 38px;
+        }
+    }
+
+    &-quantity-selector {
+        display: flex;
+        margin-bottom: 26px;
+
+        @include mq("desktop") {
+            margin-bottom: 32px;
+
+        }
+
+        .button-primary {
+            margin-left: 24px;
+        }
+    }
+
+    &-feature {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @include mq("desktop") {
+            margin-bottom: 64px;
+        }
+    }
+
+    &-bottom{
+        &-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include mq() {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        &-item{
+            & + &{
+                margin-top: 30px;
+                @include mq() {
+                    margin-top: 0;
+                }
+            }
+        }
+        
+    }
+
+    &-social {
+        display: flex;
+
+        &-item {
+            &+& {
+                margin-left: 24px;
+            }
+        }
+    }
+
+    &-favorite-button {
+        display: flex;
+        align-items: center;
+        color: var(--color-primary);
+        font-weight: var(--font-semi-bold);
+
+        .icon-heart {
+            margin-right: 16px;
+            fill: transparent;
+        }
+
+        &.is-fav .icon-heart {
+            fill: var(--color-primary);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{% layout 'master' %}
+{% block content %}
+<section class="order">
+	<div class="container">
+		<div class="order-wrapper checkout-wrapper">
+			<div class="left-main-wrapper">
+				<header class="order-header">
+					<h1 class="order-header-title">Cart</h1>
+					<span class="order-header-subtitle">2 ITEMS</span>
+				</header>
+				<div class="order-item-wrapper">
+					{% include 'pages/order/detail-item' with title: "Osmond Armchair" photo: "img/product-photo2.png", color:"Gunnared biege", price: "149.99" %}
+					{% include 'pages/order/detail-item' with title: "Meryl Lounge Chair", photo: "img/product-photo.png", color:"Lysed bright green", price: "149.99" %}
+				</div>
+				<div class="order-offer">
+					<svg class="icon icon-percent">
+						<use xlink:href="#icon-percent"></use>
+					</svg>
+					<p class="order-offer-explanation">10% Instant Discount with Federal Bank Debit Cards on a min spend of $150. TCA</p>
+				</div>
+			</div>
+			{% include 'order-summary' with button_title: 'proceed to checkout', a_href: 'address-detail.html'  %}
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}

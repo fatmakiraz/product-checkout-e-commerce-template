@@ -1,0 +1,24 @@
+{% layout 'master' %}
+{% block content %}
+<section class="payment">
+	<div class="container">
+		<div class="payment-wrapper checkout-wrapper">
+			<div class="left-main-wrapper">
+				<div class="cart-breadcrumb-wrapper">
+					{% include 'cart-breadcrumb' with title: 'Address'  is_passive: true %}
+					{% include 'cart-breadcrumb' with title: 'Shipping', is_passive: true %}
+					{% include 'cart-breadcrumb' with title: 'Payment', %}
+				</div>
+				<div class="payment-item-wrapper">
+					<div class="payment-title">Payment Method
+					</div>
+					{% include 'pages/payment/detail-item' with card_image: 'img/card-visa.svg', card_number: '.... 6754', card_date: 'Expires 06/2021', attributes: 'checked' %}
+					{% include 'pages/payment/detail-item' with card_image: 'img/card-mastercard.svg', card_number: '.... 3534', card_date: 'Expires 04/2025' %}
+				</div>
+				{% include 'button/add' with title: 'add payment method' %}
+			</div>
+			{% include 'order-summary' with button_title: 'place order' %}
+		</div>
+	</div>
+</section>
+{% endblock %}

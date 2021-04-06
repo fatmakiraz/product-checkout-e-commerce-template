@@ -1,0 +1,26 @@
+.shipping-item-wrapper {
+	margin-bottom: 32px;
+
+	@include mq() {
+		margin-bottom: 44px;
+	}
+
+}
+
+
+.shipping-method-title {
+	font-weight: var(--font-semi-bold);
+	font-size: 1.2em;
+	margin-bottom: 24px;
+
+	@include mq() {
+		font-size: 1.25em;
+		margin-bottom: 28px;
+
+	}
+
+	.shippinq-method-item-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+}
